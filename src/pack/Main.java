@@ -15,7 +15,7 @@ public class Main {
         System.out.println(bool);
 
         System.out.println("Задача 5: идеальный ли пароль \nВведите ваш пароль для сравнения. ");
-        Pattern patt2 = Pattern.compile("(?=^.{8,}$)((?=.*\\d)(?=.*[A-Z])(?=.*[a-z])");
+        Pattern patt2 = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$");
         Matcher matcher2 = patt2.matcher(scan.nextLine());
         Boolean bool2 = matcher2.matches();
         System.out.println(bool2);
